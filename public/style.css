@@ -1,0 +1,151 @@
+*{
+    box-sizing: border-box;
+}
+
+@media print {
+    /* body * {
+        display: none;
+    } */
+	@page {
+		margin: 0;
+	}
+    .a4-container{
+        display: block;
+    }
+    #download-btn{
+        display: none;
+    }
+}
+
+.a4-container{
+    width:200mm;
+    height: 290mm;
+    background: #ffff;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+
+    padding: 40px 30px 20px;
+    margin: 10px auto ;
+ 
+    border: double 5px black;
+}
+
+header,section{
+    text-align: center;
+}
+
+
+#clg-logo{
+    width: 250px;
+    margin:0 auto 5px;
+}
+#clg-logo img{
+    width: 100%;
+}
+
+.h3-text{
+    margin: 10px auto;
+}
+
+.h1-text{
+    font-size: 35px;
+
+    margin-bottom: 10px;
+
+    text-shadow: 2px 2px 0 lightgray;
+}
+
+.p-text{
+    font-style: italic;
+    font-size: 20px;
+    margin: 15px;
+}
+
+.stud-flex{
+    display: flex;
+    flex-direction: column;
+}
+
+.stud-data{
+    display: flex;
+    justify-content: space-between;
+}
+.stud-name,
+.seat-no{
+    font-size: 20px;
+    font-weight: bold;
+    margin: 5px 20px;
+}
+
+.h2-text{
+    margin: 0;
+}
+
+.project-topic{
+    font-size: 30px;
+    text-transform: uppercase;
+}
+#project-name{
+    text-decoration: underline;
+}
+
+.project-guide{
+    font-style: italic;
+}
+
+.date{
+    width: 150mm;
+    text-align: left;
+    font-size: 20px;
+}
+.signatures{
+    width: 150mm;
+    height: 150mm;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+.row{
+    display: flex;
+    justify-content: space-between;
+}
+
+.signature-container{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.signature-of,
+.signature-role,
+.signature-role-examiner{
+    font-size: 19px;
+    font-weight: bold;
+}
+.signature-of{
+    margin: 10px 0;
+}
+
+.signature-role-examiner{
+    margin: 10px 0;
+}
+.btn{
+    margin: 20px auto;
+    display: flex;
+    justify-content: center;
+}
+#download-btn{
+    padding: 10px 20px;
+    font-size: 15px;
+    cursor: pointer;
+    background: #FF2626;
+    border: none;
+    color: #fff;
+    border-radius: 10px;
+
+}
+#download-btn:hover{
+    background: #BD1616;
+}

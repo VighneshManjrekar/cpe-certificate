@@ -1,0 +1,81 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    <link rel="stylesheet" href="/style.css">
+    <title>CPE Certificate Downloader</title>
+</head>
+<body>
+    <main class="a4-container">
+        <header>
+            <div id="clg-logo">
+                <img src="res/bvp-logo.png" alt="bvp-logo">
+            </div>
+            <h3 class="h3-text">Department Of Computer Tehnology</h3>
+            <h3 class="h3-text">Bharati Vidyapeeth Institute Of Tehnology, Navi Mumbai-400614 </h3>
+            <h3 class="h3-text">(2020-2021)</h3>
+        </header>
+        <h1 class="h1-text">CERTIFICATE</h1>
+        <section>
+            <p class="p-text">This is to certify that</p>
+            <%if(student.length>1){%>
+                <div class="stud-flex">
+                    <%student.forEach(stud=>{%>
+                        <div class="stud-data">
+                            <div class="stud-name">Mr. <%=stud.name%></div>
+                            <div class="seat-no">Seat No: <%= stud.seat %></div>
+                        </div>
+                    <%})%>
+            <%}else{%>
+                <h1>No Data</h1>
+            <%}%>
+            
+            <p class="p-text">have satisfactorily completed the requirements of the Report entitled</p>
+        </section>
+        <h2 class="h2-text">On</h2>
+        <section>
+            <h1 class="project-topic">"<span id="project-name"><%=project.topic %></span>"</h1>
+            <p class="p-text">as prescribed by the <strong>MSBTE</strong> under the guidance of</p>
+            <h2 class="project-guide">Mr. <%= project.guide%></h2>
+        </section>
+        <p class="date">Date: _______________ </p>
+        <section class="signatures">
+            <div class="row">
+                <div class="signature-container">
+                    <div class="blank-space">______________________</div>
+                    <div class="signature-of">(Mr. <%= project.guide%>)</div>
+                    <div class="signature-role">Project Guide</div>
+                </div>
+                <div class="signature-container">
+                    <div class="blank-space">______________________</div>
+                    <div class="signature-of">(Mr. Mithun Mhatre)</div>
+                    <div class="signature-role">Head Of Department</div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="signature-container">
+                    <div class="blank-space">______________________</div>
+                    <div class="signature-role-examiner">Iternal Examiner</div>
+                </div>
+                <div class="signature-container">
+                    <div class="blank-space">______________________</div>
+                    <div class="signature-role-examiner">External Examiner</div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <div class="btn">
+        <button id="download-btn">Download</button>
+    </div>
+    
+</body>
+<script>
+    window.addEventListener('DOMContentLoaded', (event) => {
+    document.getElementById('download-btn').addEventListener('click',()=>{
+        window.print();
+    })
+});
+
+</script>
+</html>
